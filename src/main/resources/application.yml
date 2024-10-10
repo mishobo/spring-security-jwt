@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: jwt
+  datasource:
+    url: jdbc:mysql://localhost:3306/users?createDatabaseIfNotExist=true
+    username: root
+    password: 123456
+    hikari:
+      maxLifetime: 600000
+      maximumPoolSize: 100
+      minimumIdle: 2
+      idleTimeout: 30000
+      connectionTimeout: 600000
+      leakDetectionThreshold: 600000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+
