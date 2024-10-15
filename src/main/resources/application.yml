@@ -24,3 +24,6 @@ spring:
       hibernate:
         format_sql: false
 
+jwt:
+  secret: mySecretKey12345
+  expiration: 60000
